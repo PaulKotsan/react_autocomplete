@@ -5,7 +5,6 @@ import { Autocomplete } from './components/Autocomplete';
 import { Person } from './types/Person';
 
 export const App: React.FC = () => {
-  // Erase later.
   const [selectedPerson, setSelectedPerson] = useState<Person | null>(null);
 
   return (

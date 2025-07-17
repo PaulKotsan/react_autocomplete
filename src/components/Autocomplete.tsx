@@ -5,7 +5,7 @@ import classNames from 'classnames';
 interface AutocompleteProps {
   people: Person[];
   delay: number;
-  onSelected: (person: Person) => void;
+  onSelected: (person: Person | null) => void;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -50,9 +50,9 @@ export const Autocomplete = ({
     applyQuery(value);
 
     if (value === '') {
-      onSelected(null as any);
+      onSelected(null);
     } else if (value !== appliedQuery) {
-      onSelected(null as any);
+      onSelected(null);
     }
   };
 
